@@ -1,4 +1,4 @@
-﻿city_id,city,state_code,city_pop
+﻿city_id,city,state,city_pop
 1,Columbia,SC,333497
 2,Altonah,UT,302
 3,Bellmore,NY,34496
@@ -869,13 +869,3 @@
 868,Syracuse,MO,628
 869,Rice,MN,6263
 870,Grifton,NC,7332
-871,Lexington,KY,296965
-872,Kirkwood,NY,3800
-873,Kirtland,NM,6910
-874,Morrowville,KS,314
-875,Seligman,MO,2693
-876,Seattle,WA,837792
-877,Wever,IA,1071
-878,Guthrie,OK,20226
-879,Craig,AK,1920
-880,Senatobia,MS,14462
