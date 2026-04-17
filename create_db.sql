@@ -7,7 +7,7 @@ BEGIN
                 'STATES','OCCUPATION'
               ))
     LOOP
-        EXECUTE IMMEDIATE 'DROP TABLE ' || t.table_name || ' CASCADE CONSTRAINTS
+        EXECUTE IMMEDIATE 'DROP TABLE ' || t.table_name || ' CASCADE CONSTRAINTS';
     END LOOP;
 END;
 /
