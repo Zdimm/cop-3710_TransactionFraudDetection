@@ -21,6 +21,7 @@ Setup:
 CSV files expected in the same directory as this script:
     occupation.csv, states.csv, cardholder.csv, city_details.csv,
     cardholder_location.csv, merchant_category.csv, merchant.csv, transactions.csv
+Or I made a 'data' subdirectory to keep things organized, but you can adjust this as needed.
 """
 
 import oracledb
@@ -28,6 +29,10 @@ import csv
 import os
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+# I have it currently set to load from a 'data' subdirectory,
+# but if you want to load from the same directory as the script,
+# just set DATA_DIR = SCRIPT_DIR or delete DATA_DIR and use SCRIPT_DIR directly in bulk_load()
+DATA_DIR = os.path.join(SCRIPT_DIR, 'data')
 
 #--------------------------------------------------------------------------------
 # Just fill in your DB credentials here or use a .env file with python-dotenv
@@ -93,7 +98,8 @@ def table_exists(cursor, table_name):
 
 
 def bulk_load(table_name, file_path, sql):
-    full_path = os.path.join(SCRIPT_DIR, file_path)
+    # Change DATA_DIR to SCRIPT_DIR if you want to load from the same directory as the script
+    full_path = os.path.join(DATA_DIR, file_path)
     try:
         conn   = oracledb.connect(user=DB_USER, password=DB_PASS, dsn=DB_DSN)
         cursor = conn.cursor()
