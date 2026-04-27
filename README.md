@@ -10,5 +10,7 @@ Step 2: Read dataload.py and app.py and add your database credentials where dire
 Step 3: Use the dataload.py to populate the database with toy data
 Step 4: run the app.py using the command below
     Python -m streamlit run app.py
+    
+<img width="1012" height="656" alt="image" src="https://github.com/user-attachments/assets/8c088718-c44a-461c-81dd-5c8e3d50d1ff" />
 
 
